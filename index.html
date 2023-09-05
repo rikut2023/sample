@@ -1,98 +1,193 @@
+<!-- DOCTYPE宣言と呼ばれるもので、HTMLのバージョンを宣言するためのもの-->
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progate</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-  </head>
-  <body>
+<!-- 日本語を使うということ -->
+<html lang="ja">
+<head>
+    <!-- 文字コードの設定 -->
+    <meta charset="UTF-8">
+    <!-- レスポンシブ設定 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- サイトタイトルの設定 -->
+    <title>いきいきボディケアセンター</title>
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" type="text/css" href="reset.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <!-- slick.cssを読み込む -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <!-- slick-theme.cssを読み込む -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>　
+   
+    <!-- slick.min.jsを読み込む -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- script.jsを読み込む -->
+    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
     <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        <div class="main-container">
+        <nav class="header__nav nav" id="js-nav">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="接骨院のロゴ"></a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-items"><a href="#">初めての方へ</a></li>
+                <li class="nav-items"><a href="#">料金/メニュー</a></li>
+                <li class="nav-items"><a href="#">お客様の声</a></li>
+                <li class="nav-items"><a href="#">アクセス</a></li>
+                <li class="nav-items"><a href="#">ブログ</a></li>
+                <li class="nav-items"><a href="#" class="cta-button">ご予約/お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <button class="header__hamburger hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         </div>
-        
-        <div class="header-right">
-          <a href="#">レッスン</a>
-          <a href="#">新規登録</a>
-          <a href="#" class="login">ログイン</a>
-        </div>
-        <div class="fa fa-bars">
-          
-        </div>
-      </div>
     </header>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>LEARN TO CODE.</h1>
-        <h1>LEARN TO BE CREATIVE.</h1>
-        <p>Progateはオンラインプログラミング学習サービスです。</p>
-        <p>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-        <div class="btn-wrapper">
-          <a href="#" class="btn signup">新規登録はこちら</a>
-          <p>or</p>
-          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
+
+    <main>
+        <section id="top" class="main-visual">
+                <div class="slider">
+                    <div class="slide"><img src="images/mainvisual.png" alt="期間限定 10,000円OFF"></div>
+                    <div class="slide"><img src="images/mainvisual.png" alt="期間限定 送料無料"></div>
+                    <div class="slide"><img src="images/mainvisual.png" alt="期間限定 全品半額"></div>
+                </div>
+        </section>
+
+    <section id="strengths" >
+        <div class="main-container">
+            <h1>Strength</h1>
+            <h2>当院の強み</h2>
+            <p>専門知識と優れた技術で、あなたの健康をトータルにサポート。</br>
+               治療だけでなく、根本解決を目指すための日常トレーニングも提供。</p>
+            <div class="strength-contents">
+                <div class="strength-content">
+                    <img src="images/strength1.png" alt="トレーニング指導">
+                    <div class="strength-text">
+                         <h3>トレーニング指導</h3>
+                         <p>日常での効果的なトレーニング指導で、治療を補完。体力向上と根本改善を目指します。</p>
+                     </div>
+                </div>
+                <div class="strength-content">
+                    <img src="images/strength2.png" alt="オーダーメイドケア">
+                    <div class="strength-text">
+                        <h3>オーダーメイドケア</h3>
+                        <p>個々に合わせたケアプランで、理想の健康と美をトータルにサポート。</p>
+                    </div>
+                </div>
+                <div class="strength-content">
+                    <img src="images/strength3.png" alt="専門家によるカウンセリング">
+                    <div class="strength-text">
+                        <h3>専門家によるカウンセリング</h3>
+                        <p>熟練の専門家が、あなたの悩みや目標に合わせた最適なケアプランをご提案します。</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+        
+        
+
+    <section id="pricing" >
+        <div class="wrap">
+        <div class="main-container">
+            <h1>Menu</h1>
+            <h2>料金・メニュー</h2>
+            <div class="menu">
+                <div class="menu-detail">
+                    <a href="#" class="menu-link">
+                        <div class="menu-info">
+                         <h3>初診の方</h3>
+                        </div>
+                    
+                    <div class="menu-text">
+                        <h3>8,000円</h3>
+                        <p>あなたのお悩みについて丁寧に問診いたします。</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#" class="menu-link">
+                     <div class="menu-info">
+                            <h3>２回目以降の方</h3>
+                        </div>
+                        <div class="menu-text">
+                         <h3>10,000円</h3>
+                         <p>短期間で根本解決を目指すための施術となります。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#" class="menu-link">
+                        <div class="menu-info">
+                            <h3>スペシャルコース</h3>
+                        </div>
+                        <div class="menu-text">
+                            <h3>15,000円</h3>
+                            <p>国内最先端の器具を用いた集中治療コースとなります。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Learn Where to Get Started!</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
+    </section>
+
+    <section id="access" >
+        <div class="main-container">
+            <h1>Access</h1>
+            <h2>アクセス</h2>
+            <div class="map-and-text">
+                <div class="map">
+                    <!-- Google Map の埋め込みコードをここに入れる -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6481.33838941864!2d139.706705!3d35.6851466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cc21b93233f%3A0x6a1eb1b5a117f287!2z5paw5a6_5b6h6IuR!5e0!3m2!1sja!2sjp!4v1693372435587!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-text">
+                    <div class="directions">
+                        <p>最寄り駅から徒歩5分</p>
+                        <p>〒123-4567 住所県住所市1-2-3</p>
+                        <a href="#" class="directions-button">詳しい行き方</a>
+                    </div>
+                    <div class="hours">
+                        <h3>営業時間</h3>
+                        <p>平日: 9:00 AM - 7:00 PM</p>
+                        <p>土曜日: 10:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>jQuery</p>
+            <div class="cv_btn">
+                <a href="#">ご予約/お問い合わせ</a>
             </div>
-            <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Ruby</p>
-            </div>
-            <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PHP</p>
-            </div>
-            <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-          </div>
+            <p class="cv_text">完全予約制となります。</br>
+                ご不明な点はお気軽にお問い合わせください。</p>
+
+            
         </div>
-        <div class="clear">
-          
-        </div>
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-          <h3>Let's learn to code, learn to be creative!</h3>
-        </div>
-        <a href="#" class="btn message">さっそく開発する</a>
-      </div>
-    </div>
+    </section>
+        <!-- 他のセクションやコンテンツをここに追加 -->
+    </main>
+
     <footer>
-      <div class="container">
-        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-        <p>Learn to code, learn to be creative.</p>
-      </div>
+        <div class="main-container">
+            <div class="footer-container">
+                <div class="social-icons">
+                    <a href="#"><img src="images/Instagram_Glyph_White.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/LINE_Brand_icon.png" alt="LINE"></a>
+                    <a href="#"><img src="images/logo-white.png" alt="Twitter"></a>
+                </div>
+                <p class="copyright">&copy; 2023 いきいきボディケアセンター. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-  </body>
+ 
+
+
+     
+</body>
 </html>
