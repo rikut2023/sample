@@ -1,48 +1,108 @@
-/* タブレット向けレイアウト */
-@media all and (max-width: 1000px) {
-  .top-wrapper h1{
-    font-size:32px;
-  }
-   .lesson-wrapper h2{
-    font-size:20px;
-  }
-  .lesson{
-    width:50%;
-margin-bottom:50px
-  }
-  .text-contents{
-   
-  }
-}
 
 
-/* モバイル向けレイアウト */
-@media all and (max-width: 670px) {
-.fa-bars{
-  display:block;
+/* タブレットのスタイル */
+@media screen and (max-width: 1112px){
+    .main-container {
+        width: 900px;
+    }
+    .nav-links a{
+        font-size: 12px;
+    }
+    .main-container h1{
+        font-size: 30px;
+        padding-top: 50px;
+    }
+    .strength-text h3{
+        font-size: 16px;
+    }
+    .strength-text p{
+        font-size: 14px;
+    }
 }
-.header-right{
-  display:none;
+@media screen and (max-width: 900px){
+    .main-container {
+        width: 600px;
+    }
+    .strength-text p{
+        font-size: 12px;
+    }
+    .strength-content{
+        margin-bottom: 50px;
+    }
+    .menu{
+        padding-bottom: 30px;
+    }
+    .menu-text{
+        width: 300px;
+    }
+    .menu-info{
+        width: 200px;
+    }
+    #access{
+        padding-bottom: 50px;
+    }
+    .directions p{
+        font-size: 14px;
+    }
+
+    .nav-links{
+        display: block;
+    }
+    header .main-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__nav{
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        background-color: #fff;
+        transition: ease .4s;
+    }
+
 }
- .top-wrapper h1{
-    font-size:24px;
-    text-align:left;
-  }
-   .top-wrapper p{
-    font-size:14px;
-    text-align:left;
-  }
- 
-  .signup, .facebook, .twitter{
-    width:100%;
-  }
-  .facebook{
-    margin-bottom:10px;
-  }
-  .btn-wrapper p{
-    text-align:center;
-  }
-  .lesson{
-    width:100%;
-  }
+
+/* SPのスタイル */
+@media screen and (max-width: 630px){
+    .strength-contents{
+        display: block;
+    }
+    .strength-content{
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+    .strength-content:last-child{
+        margin: 0 auto;
+    }
+
+    .map-and-text {
+        display: block;
+    }
+    .map-text{
+        padding-left: 0px;
+    }
+    .directions{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .hours{
+        text-align: center;
+    }
+
 }
+
+@media screen and (min-width: 960px) {
+    /*PC時非表示にする*/
+    .hamburger {
+      display: none;
+    }
+  }
+
+  
