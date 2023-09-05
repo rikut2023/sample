@@ -1,0 +1,492 @@
+body a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ヘッダー全体のスタイル */
+
+
+header {
+    background-color: #C6BA95;
+    padding: 10px 0;
+    height:60px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+   
+}
+
+
+
+/* コンテンツエリアのスタイル */
+.main-container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 5px;
+   
+    align-items: center;
+    height: 100%; /* 高さを揃えるために追加 */
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+/* ロゴ画像のスタイル */
+.logo img {
+    width: 200px;
+    height: auto; /* 画像のアスペクト比を保つために追加 */
+}
+
+/* ナビゲーションメニューのスタイル */
+.nav-links {
+    
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* 高さを揃えるために追加 */
+}
+
+.nav-links li {
+    margin-right: 15px;
+    display: block;
+}
+
+.nav-links a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    display: block; /* ブロック要素として表示 */
+    font-family:"Noto Serif JP", serif;
+}
+
+/* 「ご予約/お問い合わせ」ボタンのスタイル */
+.nav-links .cta-button {
+    background-color: #937E28;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.nav-links .cta-button:hover{
+    background-color: #9d905d;
+    cursor: hand;
+}
+
+/* ハンバーガーメニュー */
+.header__hamburger {
+    width: 48px;
+    height: 100%;
+  }
+  
+  .hamburger {
+    background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+    border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+    z-index: 9999;
+    float: right;
+  }
+/* ハンバーガーメニューの線 */
+.hamburger span {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    position: relative;
+    transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+    display: block;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 0;
+  }
+  
+  .hamburger span:nth-child(2) {
+    margin: 8px 0;
+  }
+  
+  .hamburger span:nth-child(3) {
+    top: 0;
+  }
+
+  * ハンバーガーメニュークリック後のスタイル */
+  .header__nav.active {
+    transform: translateX(0);
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    top: -13px;
+    transform: rotate(-45deg);
+  }
+
+
+/* メインビジュアルのスタイル */
+.slide img {
+    max-width: 100%; /* 画像の最大幅を100%に設定 */
+    height: auto; /* 高さを自動調整 */
+}
+.slider{
+    width:100%;
+}
+
+
+
+/* Strengthのスタイル */
+
+#strengths {
+    
+    background-color: #EDE3D1;
+    text-align: center;
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0px !important;
+}
+.slick-dots{
+    bottom: 10px !important;
+}
+
+.main-container h1 {
+    padding-top: 80px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #937E28;
+    font-family:"Noto Serif JP", serif;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.main-container h2 {
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: #937E28;
+    font-family:"Noto Serif JP", serif;
+    text-align: center;
+}
+
+.strengths p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.strength-contents {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.strength-content {
+    width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.strength-content img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* 画像の幅を100%に設定 */
+}
+
+
+.strength-content:last-child {
+    margin-right: 0;
+}
+
+.strength-content .strength-text {
+    background-color: white;
+    width: 100%;
+    padding: 0 20px; /* 左右に20pxのパディングを追加 */
+    padding-bottom: 20px;
+    box-sizing: border-box; /* ボックスモデルの計算方法を変更 */
+    height: 150px;
+}
+.strength-text h3{
+    font-size:20px;
+    margin-bottom: 40px;
+    margin-top:20px;
+    position: relative;
+    font-family:"Noto Serif JP", serif;
+}
+
+.strength-text h3::before{
+position: absolute;
+content: '';
+top: 40px;
+left: 50%;
+width: 33px;
+height: 2px;
+background: #937e28;
+-webkit-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
+transform: translateX(-50%);
+}
+.strength-text p{
+    font-size:16px;
+    text-align:left;
+    margin:0 auto;
+}
+
+
+
+/* Menuのスタイル */
+
+#pricing {
+    position: relative;
+  width: 100%;
+  height:100%;
+  margin: 0 auto;
+  background: url(images/pricingback.png) no-repeat;
+  background-size: cover;
+}
+.wrap{
+    height: 100%;
+  background: rgba(252,245,241,0.8);
+}
+
+
+.menu{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* 子要素を縦並びに配置する指定 */
+    align-items: center; /* 子要素を水平方向に中央に配置する指定 */
+    padding-bottom: 60px;
+}
+
+.menu-detail {
+ 
+}
+.menu-info{
+    background-color: #C6BA95;
+    width: 300px;
+   
+}
+.menu-info h3{
+    text-align: center; /* テキストを水平方向に中央配置 */
+    display: flex; /* 子要素をフレックスアイテムとして表示 */
+    justify-content: center; /* 子要素を水平方向に中央配置 */
+    align-items: center; /* 子要素を垂直方向に中央配置 */
+    height: 100%; /* 親要素の高さいっぱいに要素を拡大 */
+    font-family:"Noto Serif JP", serif;
+    font-size:20px;
+    margin-top:  0px;
+}
+
+.menu-text {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    opacity: 0.8;
+}
+
+.menu-text h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.menu-text p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+.menu-link{
+    height: 100%;
+    box-sizing: border-box;
+    transition: all .6s ease;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+   display: flex;
+  
+}
+.menu-link::before{
+  
+    position: absolute;
+    content: '';
+    bottom: 6px;
+    right: 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 9px 9px;
+    border-color: transparent transparent #937E28 transparent;
+
+}
+
+.menu-text:hover{
+    opacity:1;
+   
+}
+
+
+
+/* Accessのスタイル */
+
+
+#access {
+    background-color: #FDF7F1;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+
+
+.map-and-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+.map-text {
+    padding-left: 60px;
+    text-align: left;
+  
+}
+.map-text p{
+    line-height: 1.5em
+}
+
+.directions p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5em
+}
+
+.directions-button {
+    display: inline-block;
+    color: #937E28;;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+.hours p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.hours h3{
+    font-size:20px;
+    font-family:"Noto Serif JP", serif;
+    margin-bottom: 10px;
+}
+
+
+/* CVボタンのスタイル */
+
+.cv_btn{
+    background-color: #937E28;
+    color: white;
+    border-radius: 50px;
+    padding: 20px 100px;
+    text-decoration: none;
+    font-size:30px;
+    margin-top: 40px;
+    font-family:"Noto Serif JP", serif;
+    display: inline-block;
+}
+
+.cv_text{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.cv_btn a{
+    position: relative;
+    display: inline-block;
+}
+.cv_btn a::after{
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: -65px;           
+    top: calc(50% - 2px);  
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotate(45deg) translateY(-50%);
+    color: inherit;
+}
+.cv_btn:hover{
+    background-color: #9d905d;
+    cursor: hand;
+}
+
+
+/* フッター全体のスタイル */
+
+
+footer {
+    background-color: #C6BA95;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .main-container{
+    display: flex;
+    margin: 0 auto;
+}
+.footer-container {
+  
+    margin: 0 auto;
+    display: grid;
+    
+}
+.footer-container p{
+    font-size:12px;
+    padding-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+.copyright{
+    margin: 0;
+}
+
+
+
+
+
